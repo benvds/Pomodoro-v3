@@ -1,3 +1,8 @@
+/* @override 
+	http://pomodoro.local/css/style.css?
+	http://pomodoro.local/css/style.css?v=1
+*/
+
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp,
 small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li,
@@ -16,7 +21,7 @@ article, aside, figure, footer, header, hgroup, nav, section { display:block; }
 nav ul { list-style:none; }
 blockquote, q { quotes:none; }
 blockquote:before, blockquote:after, q:before, q:after { content:''; content:none; }
-a { margin:0; padding:0; font-size:100%; vertical-align:baseline; background:transparent; }
+a { margin:0; padding:0; font-size:100%; vertical-align:baseline; background:transparent; text-decoration: none;}
 ins { background-color:#ff9; color:#000; text-decoration:none; }
 mark { background-color:#ff9; color:#000; font-style:italic; font-weight:bold; }
 del { text-decoration: line-through; }
@@ -52,8 +57,8 @@ input[type="checkbox"] { vertical-align: bottom; *vertical-align: baseline; }
 .ie6 input { vertical-align: text-bottom; }
 label, input[type=button], input[type=submit], button { cursor: pointer; }
 
-::-moz-selection{ background: #FF5E99; color:#fff; text-shadow: none; }
-::selection { background:#FF5E99; color:#fff; text-shadow: none; } 
+::-moz-selection{ background: #FA1801; color:#fff; text-shadow: none; }
+::selection { background:#FA1801; color:#fff; text-shadow: none; } 
 
 a:link { -webkit-tap-highlight-color: #FF5E99; } 
 
@@ -66,24 +71,10 @@ button {  width: auto; overflow: visible; }
 .hidden { display:none; visibility:hidden; } 
 .visuallyhidden { position:absolute !important; clip: rect(1px 1px 1px 1px); clip: rect(1px, 1px, 1px, 1px); }
 .invisible { visibility: hidden; }
-.clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
-.clearfix { display: inline-block; }
-* html .clearfix { height: 1%; }
-.clearfix { display: block; }
-
-
- /* Primary Styles
-    Author: 
- */
-
-
-
-
-
-
-
-
-
+.group:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+.group { display: inline-block; }
+* html .group { height: 1%; }
+.group { display: block; }
 
 
 /* 
@@ -91,7 +82,7 @@ button {  width: auto; overflow: visible; }
  */
 @media print {
   * { background: transparent !important; color: #444 !important; text-shadow: none; }
-  a, a:visited { color: #444 !important; text-decoration: underline; }
+  a, a:visited { color: #444 !important; text-decoration: none; }
   a:after { content: " (" attr(href) ")"; } 
   abbr:after { content: " (" attr(title) ")"; }
   .ir a:after { content: ""; }  /* Don't show links for images */

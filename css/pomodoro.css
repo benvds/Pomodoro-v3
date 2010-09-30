@@ -1,0 +1,176 @@
+/*
+  @override http://pomodoro.local/css/pomodoro.css
+  @author: Ben van de Sande - Pomodoro
+  @colors:
+      red: #FA1801
+*/
+
+* {
+    line-height: 150%;
+}
+
+body {
+  background: url('/img/bitmaps/eniac-1000.png') repeat fixed;
+}
+
+h1, h2, h3 {
+  font-family: Georgia;
+  font-weight: bold;
+  font-style: italic;
+  color: #FA1801;
+  margin-bottom: .5em;
+}
+h1 { font-size: 2em; }
+h2 { font-size: 1.6em; }
+h3 { font-size: 1.25em; }
+
+#container{
+  min-width: 860px;
+  max-width: 1100px;
+  margin: 0 auto;
+  background-color: #fff;
+  width: 85%;
+}
+
+#site-header, #main, #site-footer {
+  padding: 32px;
+}
+
+.article-inner {
+    margin: 0 10px;
+}
+section article:first-of-type .article-inner {
+    margin-left: 0;
+}
+section article:last-of-type .article-inner {
+    margin-right: 0;
+}
+
+.highlight {
+    padding: 20px;
+    background-color: #000;
+    color: #e6e6e6;
+}
+
+/* @group header */
+
+#site-header {
+  background-color: #fa1800;
+}
+
+#logo {
+  margin: -50px 0 0 -70px;
+}
+
+.page-intro {
+    width: 61%;
+    margin: 0 0 0 10%;
+    text-indent: 2em;
+    font-family: Georgia;
+    font-size: 150%;
+    color: #fff;
+    text-shadow: 0px -1px 0px #aaa;
+}
+
+/* @end */
+
+/* @group nav */
+#site-nav {
+  position: fixed;
+  z-index: 20;
+  top: 30px;
+  right: 60px;
+  background: transparent url('/img/shadow.png') repeat left top;
+  font-size: 1.25em;
+  margin: 0 -3px -3px 0;
+  padding: 0 3px 3px 0;
+}
+.nav {
+  margin: -3px 0 0 -3px;
+  background-color: #fa1800;
+  overflow: hidden;
+}
+
+.nav li {
+  display: inline;
+  float: left;
+}
+
+.nav a:link, .nav a:hover, .nav a:active, .nav a:visited {
+  border: 0;
+}
+
+.nav a {
+  color: #fff;
+  display: block;
+  padding: .5em 0 .5em 1em;
+  border-bottom: 0;
+  font-family: Georgia;
+  font-weight: bold;
+  font-style: italic;
+  line-height: 150%;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+.nav a:hover {
+  background-color: #fa1802;
+  color: #000;
+}
+
+.nav span {
+  padding: 0 1em 0 0;
+  border-right: 1px solid #fff;
+}
+
+.nav li:last-child span {
+  border: none;
+}
+
+#home #nav-home a, #info #nav-info a, #work #nav-work a, #work-overview #nav-work a, #blog #nav-blog a, #contact #nav-contact a {
+  color: #000;
+}
+
+/* @end */
+
+/* @group main */
+
+#main > div, #main > section, #main > article {
+  margin-bottom: 20px;
+}
+
+.group > div, .group > section, .group > article {
+  float: left;
+}
+
+#article-info {
+  width: 62%;
+}
+#article-info .article-inner {
+  margin: 0;
+}
+#article-partners {
+  float: right;
+  width: 38%;
+}
+#article-partners .article-inner {
+  margin: 0 0 20px 20px;
+}
+#section-aanpak article {
+  width: 33%;
+}
+#section-proces article {
+  width: 25%;
+}
+
+/* @end */
+
+
+
+/* @group footer */
+
+#site-footer {
+    background-color: #000;
+    color: #e6e6e6;
+}
+
+/* @end */
