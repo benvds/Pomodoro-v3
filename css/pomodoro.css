@@ -55,7 +55,7 @@ section article:last-of-type .article-inner {
 /* @group header */
 
 #site-header {
-  background-color: #fa1800;
+  background: #fa1800 url('/img/site-header-bg.gif') top left repeat;
 }
 
 #logo {
@@ -63,13 +63,85 @@ section article:last-of-type .article-inner {
 }
 
 .page-intro {
-    width: 61%;
-    margin: 0 0 0 10%;
+    margin: 0 -32px;
+    padding: 20px 0;
     text-indent: 2em;
     font-family: Georgia;
     font-size: 150%;
     color: #fff;
-    text-shadow: 0px -1px 0px #aaa;
+    background: url('/img/computer-1.png') no-repeat 550px center;
+}
+
+#intro-services {
+	margin-left: 10%;
+	padding: 0;
+    font-size: 15px;
+    list-style: none;
+    text-indent: 0;
+}
+#intro-services li {
+	position: relative;
+    width: 400px;
+    margin: 0 0 10px 0;
+    padding: 5px 10px;
+    border: 1px solid transparent;
+    text-align: right;
+}
+#intro-services li .line {
+	position: absolute;
+	top: 22px;
+	right: -100px;
+    width: 100px;
+    height: 3px;
+    border-top: 1px solid #000;
+}
+#intro-services li:hover {
+    border: 1px dashed #000;
+    cursor: pointer;
+}
+#intro-services li:hover h2 {
+	text-decoration: underline;
+}
+#intro-services li:hover .line {
+	border-style: dashed;
+}
+#intro-services li .blob {
+	-webkit-transition-duration: 0.05s, 0.05s, 0.05s, 0.05s;
+	background: #000;
+	border: 1px solid transparent;
+	border-bottom-left-radius: 3px 3px;
+	border-bottom-right-radius: 3px 3px;
+	border-top-left-radius: 3px 3px;
+	border-top-right-radius: 3px 3px;
+	height: 5px;
+	right: -3px;
+	overflow: hidden;
+	position: absolute;
+	top: -3px;
+	width: 5px;
+}
+#intro-services li:hover .blob {
+	background-color: #FA1801;
+	border-color: #000;
+}
+#intro-services #intro-webdesign {
+    margin-left: -50px;
+}
+#intro-services #intro-iphone {
+    margin-left: -25px;
+}
+#intro-services #intro-google {
+    margin-left: 25px;
+}
+
+#intro-services h2 {
+	margin: 0;
+	padding: 0;
+    font-family: "Courier New", Courier, mono;
+    font-size: 18px;
+    font-style: normal;
+    color: #000;
+    text-shadow: none;
 }
 
 /* @end */
@@ -133,6 +205,10 @@ section article:last-of-type .article-inner {
 /* @end */
 
 /* @group main */
+
+#main {
+    background: #fff url('/img/main-top-bg.gif') top left repeat-x;
+}
 
 #main > div, #main > section, #main > article {
   margin-bottom: 20px;
