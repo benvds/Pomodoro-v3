@@ -3,13 +3,14 @@
 (function($){
 
  
-
-
-
-
-
- 
-
+  $("a.popup").fancybox({
+    'overlayOpacity': .5,
+		'titleShow'     : false,
+    'transitionIn'  : 'elastic',
+    'transitionOut' : 'elastic',
+    'easingIn'      : 'easeOutBack',
+    'easingOut'     : 'easeInBack'
+	});
 
 
 })(window.jQuery);

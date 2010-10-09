@@ -41,7 +41,6 @@ h1,h2,h3,h4,h5,h6 { font-weight: bold; text-rendering: optimizeLegibility; }
 html { -webkit-font-smoothing: antialiased; }
 a:hover, a:active { outline: none; }
 a, a:active, a:visited { color:#607890; }
-a:hover { color:#036; }
 ul { margin-left:30px; }
 ol { margin-left:30px; list-style-type: decimal; }
 small { font-size:85%; }
@@ -60,7 +59,7 @@ label, input[type=button], input[type=submit], button { cursor: pointer; }
 ::-moz-selection{ background: #FA1801; color:#fff; text-shadow: none; }
 ::selection { background:#FA1801; color:#fff; text-shadow: none; } 
 
-a:link { -webkit-tap-highlight-color: #FF5E99; } 
+/*a:link { -webkit-tap-highlight-color: #FF5E99; }*/ 
 
 
 html { overflow-y: scroll; }
@@ -75,7 +74,10 @@ button {  width: auto; overflow: visible; }
 .group { display: inline-block; }
 * html .group { height: 1%; }
 .group { display: block; }
-
+.item-50, .item-33, .item-25 { float: left; }
+.item-50 { width: 50%; }
+.item-33 { width: 33.333%; }
+.item-25 { width: 25%; }
 
 /* 
  * print styles

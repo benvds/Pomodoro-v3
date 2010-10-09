@@ -24,6 +24,10 @@ h1 { font-size: 2em; }
 h2 { font-size: 1.6em; }
 h3 { font-size: 1.25em; }
 
+p {
+    margin: 0 0 1em 0;
+}
+
 #container{
   min-width: 860px;
   max-width: 1100px;
@@ -32,30 +36,35 @@ h3 { font-size: 1.25em; }
   width: 85%;
 }
 
-#site-header, #main, #site-footer {
+#site-header > div.header-inner, #site-footer {
   padding: 32px;
 }
 
-.article-inner {
+.article-inner, .item-inner {
     margin: 0 10px;
 }
-section article:first-of-type .article-inner {
+/*section article:first-of-type .article-inner, .item:first-of-type .item-inner, .item-33:first-of-type .item-inner, .item-25:first-of-type .item-inner {
     margin-left: 0;
 }
-section article:last-of-type .article-inner {
+section article:last-of-type .article-inner, .item:last-of-type .item-inner, .item-33:last-of-type .item-inner, .item-25:last-of-type .item-inner {
     margin-right: 0;
-}
+}*/
 
 .highlight {
+	margin: 1em 0 3em;
     padding: 20px;
-    background-color: #000;
+    background: #000 url('/img/pattern-overlay.png') bottom left no-repeat;
     color: #e6e6e6;
 }
 
 /* @group header */
 
 #site-header {
-  background: #fa1800 url('/img/site-header-bg.gif') top left repeat;
+  background-color: #fa1800;
+  /*background: #fa1800 url('/img/site-header-bg.gif') top left repeat;*/
+}
+#site-header p {
+    margin: 0;
 }
 
 #logo {
@@ -63,17 +72,31 @@ section article:last-of-type .article-inner {
 }
 
 .page-intro {
-    margin: 0 -32px;
-    padding: 20px 0;
+    margin: 0 360px 0 30px;
+    padding: 0 0 20px 0;
     text-indent: 2em;
     font-family: Georgia;
     font-size: 150%;
     color: #fff;
-    background: url('/img/computer-1.png') no-repeat 550px center;
+    /*background: url('/img/computer-1.png') no-repeat 550px center;*/
 }
 
+
+#home #site-header .header-inner {
+  background: transparent url('/img/man-achter-computer-groot.png') bottom left no-repeat;
+  height: 550px;
+}
+#info #site-header .header-inner {
+  background: transparent url('/img/computer-1.png') no-repeat right 12px;
+}
+#diensten #site-header .header-inner {
+  background: transparent url('/img/computers-met-rollen.png') no-repeat 90% 60px;
+}
+
+
+
 #intro-services {
-	margin-left: 10%;
+	margin-left: 60px;
 	padding: 0;
     font-size: 15px;
     list-style: none;
@@ -81,19 +104,20 @@ section article:last-of-type .article-inner {
 }
 #intro-services li {
 	position: relative;
-    width: 400px;
-    margin: 0 0 10px 0;
-    padding: 5px 10px;
-    border: 1px solid transparent;
+    width: 380px;
+    margin: 0 0 20px 0;
+    padding: 5px 15px;
+    border: 1px solid #000;
     text-align: right;
+    background-color: #000;
 }
 #intro-services li .line {
 	position: absolute;
 	top: 22px;
-	right: -100px;
-    width: 100px;
+	right: -200px;
+    width: 200px;
     height: 3px;
-    border-top: 1px solid #000;
+    border-top: 2px solid #000;
 }
 #intro-services li:hover {
     border: 1px dashed #000;
@@ -102,36 +126,42 @@ section article:last-of-type .article-inner {
 #intro-services li:hover h2 {
 	text-decoration: underline;
 }
-#intro-services li:hover .line {
+#intro-services li:hover .line, #intro-services #intro-google:hover .line {
 	border-style: dashed;
 }
-#intro-services li .blob {
-	-webkit-transition-duration: 0.05s, 0.05s, 0.05s, 0.05s;
-	background: #000;
-	border: 1px solid transparent;
-	border-bottom-left-radius: 3px 3px;
-	border-bottom-right-radius: 3px 3px;
-	border-top-left-radius: 3px 3px;
-	border-top-right-radius: 3px 3px;
-	height: 5px;
-	right: -3px;
-	overflow: hidden;
-	position: absolute;
-	top: -3px;
-	width: 5px;
-}
-#intro-services li:hover .blob {
-	background-color: #FA1801;
-	border-color: #000;
-}
 #intro-services #intro-webdesign {
-    margin-left: -50px;
+    margin-left: 250px;
+}
+#intro-services #intro-webdesign .line {
+    width: 80px;
+    right: -80px;
+}
+#intro-services #intro-applications {
+    margin-left: -30px;
+}
+#intro-services #intro-applications .line {
+    width: 380px;
+    right: -380px;
 }
 #intro-services #intro-iphone {
-    margin-left: -25px;
+    margin-left: 80px;
+}
+#intro-services #intro-iphone .line {
+    width: 100px;
+    right: -100px;
 }
 #intro-services #intro-google {
-    margin-left: 25px;
+    margin-left: 0px;
+}
+#intro-services #intro-google .line {
+    position: absolute;
+	right: auto;
+	left: 22px;
+    height: 100px;
+    bottom: 100px;
+    width: auto;
+    border-left: 2px solid #000;
+    vertical-align: bottom;
 }
 
 #intro-services h2 {
@@ -140,13 +170,19 @@ section article:last-of-type .article-inner {
     font-family: "Courier New", Courier, mono;
     font-size: 18px;
     font-style: normal;
-    color: #000;
+    color: #FA1801;
     text-shadow: none;
 }
+#intro-services p {
+    width: auto;
+}
+
+p a:hover, .nav a:hover { color:#fff; background-color: #607890; }
 
 /* @end */
 
 /* @group nav */
+
 #site-nav {
   position: fixed;
   z-index: 20;
@@ -157,22 +193,17 @@ section article:last-of-type .article-inner {
   margin: 0 -3px -3px 0;
   padding: 0 3px 3px 0;
 }
-.nav {
+#site-nav .nav {
   margin: -3px 0 0 -3px;
   background-color: #fa1800;
   overflow: hidden;
 }
-
-.nav li {
+#site-nav .nav li {
   display: inline;
   float: left;
 }
 
-.nav a:link, .nav a:hover, .nav a:active, .nav a:visited {
-  border: 0;
-}
-
-.nav a {
+#site-nav a {
   color: #fff;
   display: block;
   padding: .5em 0 .5em 1em;
@@ -184,17 +215,17 @@ section article:last-of-type .article-inner {
   -webkit-font-smoothing: subpixel-antialiased;
 }
 
-.nav a:hover {
+#site-nav a:hover {
   background-color: #fa1802;
   color: #000;
 }
 
-.nav span {
+#site-nav span {
   padding: 0 1em 0 0;
   border-right: 1px solid #fff;
 }
 
-.nav li:last-child span {
+#site-nav li:last-child span {
   border: none;
 }
 
@@ -207,7 +238,14 @@ section article:last-of-type .article-inner {
 /* @group main */
 
 #main {
-    background: #fff url('/img/main-top-bg.gif') top left repeat-x;
+	background-color: #fff;
+    /*background: #fff url('/img/main-top-bg.gif') top left repeat-x;*/
+}
+#main-inner {
+    margin: 32px;
+}
+#diensten #main-inner {
+    margin-right: 16px;
 }
 
 #main > div, #main > section, #main > article {
@@ -218,24 +256,51 @@ section article:last-of-type .article-inner {
   float: left;
 }
 
-#article-info {
+#diensten #main, #item-info {
   width: 62%;
 }
-#article-info .article-inner {
-  margin: 0;
-}
-#article-partners {
+#wrap > aside, #item-partners {
   float: right;
   width: 38%;
 }
-#article-partners .article-inner {
-  margin: 0 0 20px 20px;
+#wrap > aside .aside-inner {
+  margin: 32px 32px 32px 16px;
+}
+#item-info .item-inner {
+    margin: 0 16px 0 0;
+}
+#item-partners .item-inner {
+    margin: 0 0 0 16px;
 }
 #section-aanpak article {
   width: 33%;
 }
 #section-proces article {
   width: 25%;
+}
+#list-proces img {
+    max-width: 90%;
+    border: 1px solid #ccc;
+}
+
+article h2 {
+    margin: 1em 0 .5em;
+}
+article h2:first-child {
+    margin-top: 0;
+}
+
+ul.group {
+    margin: 0 -10px; /* fixes first and last item margin */
+    padding: 0;
+    list-style: none;
+}
+.showcase li {
+	float: left;
+    width: 33%;
+}
+.showcase img {
+    max-width: 100%;
 }
 
 /* @end */
@@ -247,6 +312,17 @@ section article:last-of-type .article-inner {
 #site-footer {
     background-color: #000;
     color: #e6e6e6;
+}
+#site-footer a.n {
+    color: #fff;
+}
+
+#social-media dt, #social-media dd {
+    float: left;
+}
+#social-media dt {
+    clear: left;
+    margin: 0 8px 0 0;
 }
 
 /* @end */
