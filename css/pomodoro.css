@@ -28,6 +28,11 @@ p {
     margin: 0 0 1em 0;
 }
 
+figure {
+    width: auto;
+    text-align: center;
+}
+
 #container{
   min-width: 860px;
   max-width: 1100px;
@@ -51,7 +56,7 @@ section article:last-of-type .article-inner, .item:last-of-type .item-inner, .it
 }*/
 
 .highlight {
-	margin: 1em 0 3em;
+	margin: 0 0 3em;
     padding: 20px;
     background: #000 url('/img/pattern-overlay.png') bottom left no-repeat;
     color: #e6e6e6;
@@ -92,13 +97,16 @@ section article:last-of-type .article-inner, .item:last-of-type .item-inner, .it
 #diensten #site-header .header-inner {
   background: transparent url('/img/computers-met-rollen.png') no-repeat 90% 60px;
 }
+#contact #site-header .header-inner {
+  background: transparent url('/img/muis.png') no-repeat 90% 40px;
+}
 
 
 
 #intro-services {
 	margin-left: 60px;
 	padding: 0;
-    font-size: 15px;
+    font-size: 14px;
     list-style: none;
     text-indent: 0;
 }
@@ -107,7 +115,7 @@ section article:last-of-type .article-inner, .item:last-of-type .item-inner, .it
     width: 380px;
     margin: 0 0 20px 0;
     padding: 5px 15px;
-    border: 1px solid #000;
+    border: 2px solid #000;
     text-align: right;
     background-color: #000;
 }
@@ -120,7 +128,7 @@ section article:last-of-type .article-inner, .item:last-of-type .item-inner, .it
     border-top: 2px solid #000;
 }
 #intro-services li:hover {
-    border: 1px dashed #000;
+    border: 2px dashed #000;
     cursor: pointer;
 }
 #intro-services li:hover h2 {
@@ -144,25 +152,25 @@ section article:last-of-type .article-inner, .item:last-of-type .item-inner, .it
     right: -380px;
 }
 #intro-services #intro-iphone {
-    margin-left: 80px;
+    margin-left: 50px;
 }
 #intro-services #intro-iphone .line {
     width: 100px;
     right: -100px;
 }
 #intro-services #intro-google {
-    margin-left: 0px;
+    margin: 0px;
 }
-#intro-services #intro-google .line {
+/*#intro-services #intro-google .line {
     position: absolute;
 	right: auto;
 	left: 22px;
     height: 100px;
-    bottom: 100px;
+    top: 50px;
     width: auto;
     border-left: 2px solid #000;
     vertical-align: bottom;
-}
+}*/
 
 #intro-services h2 {
 	margin: 0;
@@ -176,8 +184,25 @@ section article:last-of-type .article-inner, .item:last-of-type .item-inner, .it
 #intro-services p {
     width: auto;
 }
+#intro-services a {
+    color: #fff;
+}
+#intro-services li:hover {
+    background-color: #fff;
+}
+#intro-services li:hover a {
+    color: #000;
+}
 
 p a:hover, .nav a:hover { color:#fff; background-color: #607890; }
+
+#gmap {
+  width: auto;
+  height: 400px;
+}
+.infoWindow {
+  color: #444;
+}
 
 /* @end */
 
@@ -229,7 +254,7 @@ p a:hover, .nav a:hover { color:#fff; background-color: #607890; }
   border: none;
 }
 
-#home #nav-home a, #info #nav-info a, #work #nav-work a, #work-overview #nav-work a, #blog #nav-blog a, #contact #nav-contact a {
+#home #nav-home a, #info #nav-info a, #work #nav-work a, #work-overview #nav-work a, #blog #nav-blog a, #contact #nav-contact a, #diensten #nav-services a {
   color: #000;
 }
 
@@ -282,6 +307,12 @@ p a:hover, .nav a:hover { color:#fff; background-color: #607890; }
     max-width: 90%;
     border: 1px solid #ccc;
 }
+#item-home-intro, #item-contact {
+    width: 38%;
+}
+#item-home-showcase, #item-gmap {
+    width: 62%;
+}
 
 article h2 {
     margin: 1em 0 .5em;
@@ -301,6 +332,20 @@ ul.group {
 }
 .showcase img {
     max-width: 100%;
+}
+
+#item-home-intro h2 {
+    color: #000;
+    font-size: 120%;
+}
+#item-home-intro .first-word, #item-home-intro .n, #item-home-intro .job {
+    font-size: 150%;
+}
+#item-home-intro .n {
+    color: #f00;
+}
+#item-home-showcase .highlight {
+    text-align: center;
 }
 
 /* @end */
